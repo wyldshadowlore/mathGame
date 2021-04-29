@@ -4,6 +4,7 @@ Main game file
 #import essential files
 import os
 from rich import print
+import calculate
 
 validChoices = ['a', 's', 'd', 'm']
 
@@ -40,9 +41,7 @@ def menu():
 			except:
 				print("Invalid choice, please choose between 1 and 30.")
 		if gamesChoice >= 1 and gamesChoice <= 30:
-			print(gamesChoice, mathChoice)
-			print("Exiting Gracefully")
-			menuLoop = False
+			calculate.problemSet(mathChoice, gamesChoice)
 		else:
 			pass
 
