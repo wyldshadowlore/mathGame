@@ -4,10 +4,10 @@ Calculations
 import random
 
 
-def nextProblem(mathChoice):
+def nextProblem(mathChoice, validChoices):
 	getOperation = random.choices(list(mathChoice))  ## Need to change this back to string
-	getOperation = ''.join(getOperation)
-	if getOperation == 'a' :
+#	getOperation = ''.join(getOperation)
+	if getOperation == validChoices[0] :
 		augend = random.randrange(10)
 		addend = random.randrange(10)
 		print(augend, "+", addend, "=")
@@ -18,10 +18,10 @@ def nextProblem(mathChoice):
 			pass
 
 
-def problemSet(mathChoice, gamesChoice):
+def problemSet(mathChoice, gamesChoice, validChoices):
 	counter = 0
 	counthigh = gamesChoice
 	while counter < counthigh:
-		nextProblem(mathChoice)
+		nextProblem(mathChoice, validChoices)
 		counter += 1
 

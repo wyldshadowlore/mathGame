@@ -41,7 +41,7 @@ def menu():
 			except:
 				print("Invalid choice, please choose between 1 and 30.")
 		if gamesChoice >= 1 and gamesChoice <= 30:
-			calculate.problemSet(mathChoice, gamesChoice)
+			calculate.problemSet(mathChoice, gamesChoice, validChoices)
 		else:
 			pass
 
